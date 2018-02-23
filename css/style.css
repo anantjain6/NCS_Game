@@ -60,3 +60,68 @@ footer p:first-child {
 footer p:last-child {
     float: right;
 }
+.parent{
+    margin-top: 250px;
+}
+input{
+    width: 300px;
+    height:30px;
+}
+#submit{
+    width: 50px;
+    height:30px;
+}
+.login_page{
+    width:360px;
+    padding:10% 0 0;
+    margin:auto;
+    border-radius: 40px;
+}
+.form{
+    position:relative;
+    z-index:1;
+    background: #000000;
+    max-width: 360px;
+    margin:0 auto 100px;
+    padding:45px;
+    text-align: center;
+}
+.form input{
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background:#ffffff;
+    width:100%;
+    border:0;
+    margin:0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size:14px;   
+}
+.form button{
+    font-family: "Roboto",sans-serif;
+    text-transform: upperecase;
+    outline:0;
+    background:#CCC;
+    width:100%;
+    border:0;
+    padding:15px;
+    color:#FFFFFF;
+    font-size: 14px;
+    cursor:pointer;
+    
+}
+.form button:hover,.form button:active{
+    background: #CCC;
+}
+.form .message{
+    margin:15px 0 0;
+    color: aliceblue;
+    font-size:12px;
+}
+.form .message a{
+    color: #4CAF50;
+    text-decoration: none;
+}
+.hidden{
+    display:none;
+}

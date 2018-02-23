@@ -13,18 +13,31 @@ if(isset($_POST['username']))
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Login</title>
 </head>
 <body>
-	<form method="POST" action="">
-		<table>
-			<tr><td>Username</td><td><input type="email" name="login_email" placeholder="Enter you email" required></td></tr>
-			<tr><td>Password</td><td><input type="password" name="login_password" required></td></tr>
-			<tr><td></td><td><input type="submit" name="login_submit"></td></tr>
-		</table>
-
-</form>
-
+    <div class="login_page">
+    	<div class="form">
+    		<form class="register_form hidden" id="register_form">
+    			<input type="text" name="login_username" placeholder="Username">
+    			<input type="text" name="login_password" placeholder="Password">
+    			<input type="text" name="login_email" placeholder="Email">
+    			<button>Create</button>
+                 <p class="message">Already Registered?<a href="#"> Login</a>
+                 </p>
+    		</form>
+            <form class="login_form" id="login_form">
+                <input type="text" name="login_username" placeholder="Username">
+                <input type="password" name="login_password" placeholder="Password">
+                <button>login</button>
+                <p class="message">Not Registered?<a href="#" id="msg">Register</a></p>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("msg").addEventListener('click',function(){document.getElementById("register_form").classList.remove("hidden");document.getElementById("login_form").className += " hidden";});
+    </script>
 </body>
 </html>
 
