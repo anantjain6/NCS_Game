@@ -93,7 +93,7 @@ footer p:last-child {
     text-transform: uppercase;
     outline:0;
     background: linear-gradient(#fff,#000);
-    width:360px;
+    width:480px;
     height:60px;
     border:0;
     padding:8px;
@@ -124,8 +124,6 @@ footer p:last-child {
   text-align: center;
   font-size: 28px;
 }
-
-
 .form_control_custom::-moz-placeholder {
   font-family: 'Courier New', Arial, Helvetica, sans-serif;
   color: #BDBDBD;

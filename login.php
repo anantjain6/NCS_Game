@@ -24,7 +24,7 @@ if(isset($_POST['username']))
                 <input type="text" name="login_password" placeholder="Password" class="form_control_custom">
                 <input type="text" name="login_email" placeholder="Email" class="form_control_custom">
                 <button>Create</button>
-                 <p class="message">Already Registered?<a href="#"> Login</a>
+                 <p class="message">Already Registered?<a href="#" id="msg1"> Login</a>
                  </p>
             </form>
             <form class="login_form" id="login_form">
@@ -37,6 +37,7 @@ if(isset($_POST['username']))
     </div>
     <script type="text/javascript">
         document.getElementById("msg").addEventListener('click',function(){document.getElementById("register_form").classList.remove("hidden");document.getElementById("login_form").className += " hidden";});
+        document.getElementById("msg1").addEventListener('click',function(){document.getElementById("login_form").classList.remove("hidden");document.getElementById("register_form").className += " hidden";});
     </script>
 </body>
 </html>
