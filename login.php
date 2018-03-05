@@ -15,11 +15,11 @@ if(isset($_POST['login_username']))
     if(num==1)
 	{
 		$sql="SELECT id FROM user WHERE email='".$login_email."'";
-		$result=mysqli_query($connection,$sql);
+		$result=mysqli_query($con,$sql);
 		$user_id=mysqli_result($result,0);
 		
 		$sql="SELECT level FROM userdetail WHERE id='".$user_id."'";
-		$result=mysqli_query($connection,$sql);
+		$result=mysqli_query($con,$sql);
 		$user_level=mysqli_result($result,0);
 
 		$_SESSION['user']=$register_email;
@@ -101,18 +101,18 @@ if(isset($_POST['register_username']))
     <div class="login_page">
         <div class="form">
             <form class="register_form hidden" id="register_form" action="" method="POST">
-                <input type="text" name="register_username" placeholder="Username" class="form_control_custom" required>
-                <input type="password" name="register_password" placeholder="Password" class="form_control_custom" required>
                 <input type="email" name="register_email" placeholder="Email" class="form_control_custom" required>
+                <input type="password" name="register_password" placeholder="Password" class="form_control_custom" required>
+                <input type="password" name="register_password2" placeholder="Confirm Password" class="form_control_custom" required>
                 <button type="submit">Create</button>
-                 <p class="message">Already Registered?<a href="#" id="msg1"> Login</a>
+                 <p class="message">Already Registered?<a href="#" id="msg1" style="font-size: 12px"> Login</a>
                  </p>
             </form>
             <form class="login_form" id="login_form" action="" method="POST">
                 <input type="text" name="login_username" placeholder="Username" class="form_control_custom" required>
                 <input type="password" name="login_password" placeholder="Password" class="form_control_custom" required>
                 <button type="submit">LOGIN</button>
-                <p class="message">Not Registered?<a href="#" id="msg">Register</a></p>
+                <p class="message">Not Registered?<a href="#" id="msg" style="font-size: 12px">Register</a></p>
             </form>
         </div>
     </div>

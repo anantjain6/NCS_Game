@@ -5,15 +5,23 @@
 
 body,
 html {
-    font-family: sans-serif;
+    font-family: courier New;
+    font-size: 2rem;
     text-align: center;
     background: #000;
 }
 
+a{
+    color: #fff;
+    font-size:1rem;
+    font-family: courier New;
+    text-decoration: none;
+}
+
 h1 {
     color: #f00;
-    font-size: 48px;
-    margin: 30px auto;
+    font-size: 1rem;
+    margin: auto;
 }
 
 h2 {
@@ -28,7 +36,7 @@ h3 {
 }
 
 img {
-    margin-top: 30px;
+    margin-top: 2rem;
 }
 
 ul {
@@ -129,4 +137,12 @@ footer p:last-child {
   color: #BDBDBD;
   text-align: center;
   font-size: 36px;
+}
+.countdown{
+    margin:auto;
+    margin-top: 1rem;
+}
+.content{
+    margin: auto;
+    margin-top: 4rem;
 }
