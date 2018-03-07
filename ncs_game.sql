@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Mar 04, 2018 at 05:18 PM
--- Server version: 5.7.19
--- PHP Version: 7.0.23
+-- Host: 127.0.0.1
+-- Generation Time: Mar 07, 2018 at 06:29 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,12 +28,10 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admin` (
+  `id` int(10) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -42,39 +40,50 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `userdetail`
---
-
-DROP TABLE IF EXISTS `userdetail`;
-CREATE TABLE IF NOT EXISTS `userdetail` (
-  `uid` int(10) NOT NULL,
+CREATE TABLE `user` (
+  `gid` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(767) NOT NULL,
+  `gender` varchar(100) NOT NULL,
+  `pic` varchar(9999) NOT NULL,
   `level` int(10) NOT NULL,
   `reg_time` datetime NOT NULL,
-  `last_time` datetime NOT NULL,
-  KEY `uid` (`uid`)
+  `last_time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Constraints for dumped tables
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`gid`, `name`, `email`, `gender`, `pic`, `level`, `reg_time`, `last_time`) VALUES
+(2147483647, 'Anant Jain', 'anantjain60@gmail.com', 'male', 'https://lh3.googleusercontent.com/-QTQVl9Yvlt0/AAAAAAAAAAI/AAAAAAAACaU/vuNfcPQPVj0/photo.jpg', 1, '2018-03-07 22:49:27', '2018-03-07 22:49:27');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Constraints for table `userdetail`
+-- Indexes for table `admin`
 --
-ALTER TABLE `userdetail`
-  ADD CONSTRAINT `userdetail_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `user` (`id`);
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`gid`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
