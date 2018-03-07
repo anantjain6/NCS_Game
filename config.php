@@ -11,8 +11,16 @@ $lockStart=800;
 $lockEnd=2000;
 if($lockStart < $current_time && $current_time < $lockEnd)
 {
-  include 'lock.php';
-  die();
+	include 'lock.php';
+	die();
+}
+
+require_once 'Mobile_Detect.php';
+$detect = new Mobile_Detect;
+if($detect->isMobile())
+{
+	include 'moblock.php';
+	die();
 }
 
 function mysqli_result($res,$row=0,$col=0)

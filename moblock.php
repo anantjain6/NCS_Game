@@ -1,0 +1,1 @@
+This game is not allowed to play on mobile
