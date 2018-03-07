@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2018 at 07:35 PM
+-- Generation Time: Mar 07, 2018 at 06:29 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -41,8 +41,10 @@ CREATE TABLE `admin` (
 --
 
 CREATE TABLE `user` (
+  `gid` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(767) NOT NULL,
+  `gender` varchar(100) NOT NULL,
   `pic` varchar(9999) NOT NULL,
   `level` int(10) NOT NULL,
   `reg_time` datetime NOT NULL,
@@ -53,8 +55,8 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`name`, `email`, `pic`, `level`, `reg_time`, `last_time`) VALUES
-('Anant Jain', 'anantjain60@gmail.com', 'https://lh3.googleusercontent.com/-QTQVl9Yvlt0/AAAAAAAAAAI/AAAAAAAACaU/vuNfcPQPVj0/photo.jpg', 3, '2018-03-07 23:09:44', '2018-03-07 23:20:15');
+INSERT INTO `user` (`gid`, `name`, `email`, `gender`, `pic`, `level`, `reg_time`, `last_time`) VALUES
+(2147483647, 'Anant Jain', 'anantjain60@gmail.com', 'male', 'https://lh3.googleusercontent.com/-QTQVl9Yvlt0/AAAAAAAAAAI/AAAAAAAACaU/vuNfcPQPVj0/photo.jpg', 1, '2018-03-07 22:49:27', '2018-03-07 22:49:27');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +72,8 @@ ALTER TABLE `admin`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`email`);
+  ADD PRIMARY KEY (`gid`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
