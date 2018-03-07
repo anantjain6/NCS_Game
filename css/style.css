@@ -138,11 +138,12 @@ footer p:last-child {
   text-align: center;
   font-size: 36px;
 }
+
 .countdown{
     margin:auto;
     margin-top: 1rem;
 }
 .content{
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
