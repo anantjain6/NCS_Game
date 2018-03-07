@@ -26,17 +26,15 @@ if(isset($_GET['code']))
 	else
 	{
 		$sql="INSERT INTO user VALUES (
-		'".$gpUserProfile['id']."'
-		,'".$gpUserProfile['given_name']." ".$gpUserProfile['family_name']."'
+		'".$gpUserProfile['given_name']." ".$gpUserProfile['family_name']."'
 		,'".$gpUserProfile['email']."'
-		,'".$gpUserProfile['gender']."'
 		,'".$gpUserProfile['picture']."'
 		,'1'
 		,'".date('Y-m-d H:i:s')."'
 		,'".date('Y-m-d H:i:s')."'
 		)";
 		$result = mysqli_query($con,$sql);
-			
+		
 		$_SESSION['user']=$gpUserProfile['email'];
 		echo"<script type='text/javascript'>
 		window.location.href='rule.php';
