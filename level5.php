@@ -29,7 +29,7 @@ if(isset($_SESSION['user']))
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Unraveling | Night Knitting</title>
+	<title>Tactics | Night Knitting</title>
     <?php include 'head.php'; ?>
 </head>
 <body>

@@ -24,7 +24,7 @@ if(isset($_SESSION['user']))
 <head>
     <?php include 'head.php'; ?>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Rebirth | Night Knitting</title>
+	<title>Downfall | Night Knitting</title>
 	<style type="text/css">
 		.btn {
     font-family: "Courier New",sans-serif;
@@ -43,6 +43,7 @@ if(isset($_SESSION['user']))
 }
 	</style>
 </head>
+<title>Downfall</title>
 <body>
 	<script type="text/javascript">
 		window.helpme = "I feel like I am connected... to somewhere else...";
@@ -50,7 +51,7 @@ if(isset($_SESSION['user']))
 	
 	<!--from here-->
 	<button class="btn" id="btn1" style="position: fixed;left: 24%; top: 300;" onclick="click1();">Click ME</button>
-	<a href="level0.php?start=true" style="color: #000; position: fixed; left: 40%; top: 300;size:">They were mere distractions!<br>Click ME!</a>
+	<a href="level0.php?start=true" style="color: #000; position: fixed; left: 40%; top: 300;size:">You found ME !!!</a>
 	<button class="btn hidden" id="btn2" style="position: fixed;right: 24%; top: 300;" onclick="click2();">Click ME
 	</button>
 	<!-- till here-->

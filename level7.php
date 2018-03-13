@@ -39,7 +39,7 @@ if(isset($_SESSION['user']))
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Glare | Night Knitting</title>
+	<title>Overcast | Night Knitting</title>
     <?php include 'head.php'; ?>
 </head>
 <body>

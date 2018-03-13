@@ -21,11 +21,8 @@ require_once 'Mobile_Detect.php';
 $detect = new Mobile_Detect;
 if($detect->isMobile())
 {
-    echo "<script>
-    alert('He mocks at the puny devices humans operate.
-It makes them an easier target.');
-    </script>";
-	die();
+    echo "<script>alert('He mocks at the puny devices humans operate on. It makes them an easier target.');</script>";
+	// die();
 }
 
 function mysqli_result($res,$row=0,$col=0)

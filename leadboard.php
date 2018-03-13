@@ -3,6 +3,7 @@ include 'config.php';
 ?>
 <html>
 <head>
+	<title>Leaderboard | Night Knitting</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <?php include 'head.php'; ?>
 </head>

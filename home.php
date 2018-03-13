@@ -12,7 +12,7 @@ if(isset($_SESSION['user']))
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title></title> 
+    <title>Night Knitting</title> 
     <?php include 'head.php'; ?>
 </head>
 <body class="bkgbody">
