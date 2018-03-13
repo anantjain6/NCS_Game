@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config.php';
 ?>
 <html>
 <head>
@@ -21,6 +21,7 @@ while ($row = mysqli_fetch_array($results))
 	<td valign="middle">'.$row['level'].'</td>
 	<td valign="middle">'.$row['total'].'</td>
 	</tr>';
+}
 ?>
 </table>
 </div>

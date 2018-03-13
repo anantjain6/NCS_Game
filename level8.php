@@ -24,7 +24,7 @@ if(isset($_SESSION['user']))
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Can U See Me!.</title>
+	<title>Encounter | Night Knitting</title>
     <?php include 'head.php'; ?>
 </head>
 <body>
