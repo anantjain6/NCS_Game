@@ -11,12 +11,12 @@ if(isset($_SESSION['user']))
 
 	include 'validate.php';
 
-	if($_POST['answer']=="scaryasylum")
+	if($_POST['answer']=="evilcorp")
 	{
-		$sql="UPDATE user SET level=4,last_time='".date('Y-m-d H:i:s')."' WHERE email='".$_SESSION['user']."'";
+		$sql="UPDATE user SET level=13,last_time='".date('Y-m-d H:i:s')."' WHERE email='".$_SESSION['user']."'";
 		$result=mysqli_query($con,$sql);
 		echo "<script>
-		window.location = 'level4.php';
+		window.location = 'level13.php';
 		</script>";
 		die();
 	}
@@ -28,12 +28,15 @@ if(isset($_SESSION['user']))
     <?php include 'head.php'; ?>
 </head>
 <body>
-	
+	<?php
+		include 'ryuk.php';
+	?>
 	<div>
 		<img src="assets/images/img-3-notfound.jpg" margin="auto">
 	</div>
 	<script type="text/javascript">
-		window.helpme = "It used to be very scary here.. I scribbled all day but to no avail...";
+		console.log("Oh shit! HE has found us here. I can't help you now ");
+		window.helpme = "Be quite he is listening us!"
 	</script>
 	<form method="POST" action="">
 		<input type="text" id="ans" name="answer">

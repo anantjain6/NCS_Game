@@ -19,7 +19,7 @@ if(isset($_SESSION['user']))
     <div><img src="assets/images/logo-full.png" margin="auto"></div>
     <h1>BE WARNED</h1>
     <div style="padding-top: 8rem"><a href="level<?php echo $user_level; ?>.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;"><?php
-    if($user_level==1)
+    if($user_level==0)
         echo "Start game.";
     else
         echo "Resume game.";
@@ -27,9 +27,11 @@ if(isset($_SESSION['user']))
     </div>
     <div style="padding-top: 1rem"><a href="" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Rules.</a>
     </div>
-    <div style="padding-top: 1rem"><a href="" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Leaderboard.</a>
+    <div style="padding-top: 1rem"><a href="htp.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">How to play.</a>
     </div>
-    <div style="padding-top: 1rem"><a href="" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Sign out.</a>
+    <div style="padding-top: 1rem"><a href="leadboard.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Leaderboard.</a>
+    </div>
+    <div style="padding-top: 1rem"><a href="signout.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Sign out.</a>
     </div>
 </body>
 </html>

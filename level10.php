@@ -4,10 +4,10 @@ include'config.php';
 $thislevel=2;
 if(isset($_SESSION['user']))
 {
-	if(!isset($_GET['feedme']))
+	if(!isset($_GET['reason']))
 	{
 		echo "<script>
-		window.location = 'level2.php?feedme=';
+		window.location = 'level10.php?reason=';
 		</script>";
 		die();
 	}
@@ -18,13 +18,20 @@ if(isset($_SESSION['user']))
 	$_SESSION['level'] = $user_level;
 
 	include 'validate.php';
+	// include 'country.php';
+	// if($ipdata['country'] !== "America"){
+	// 	echo "<script>"
+	// 	window.location = 'changecountry.php';
+	// 	</script>;
+	// 	die();
+	// }
 
-	if($_GET['feedme']=="more")
+	if($_GET['reason']=="iniquity")
 	{
-		$sql="UPDATE user SET level=3,last_time='".date('Y-m-d H:i:s')."' WHERE email='".$_SESSION['user']."'";
+		$sql="UPDATE user SET level=11,last_time='".date('Y-m-d H:i:s')."' WHERE email='".$_SESSION['user']."'";
 		$result=mysqli_query($con,$sql);
 		echo "<script>
-		window.location = 'level3.php';
+		window.location = 'level12.php';
 		</script>";
 		die();
 	}
@@ -32,33 +39,16 @@ if(isset($_SESSION['user']))
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Confrontation | Night Knitting</title>
+	<title>Stop me or I'll catch you. </title>
     <?php include 'head.php'; ?>
 </head>
 <body>
 	
 	<div>
-		<img class="quesImg" src="assets/images/img-2.jpg" margin="auto" >
+		<img src="assets/images/img-10.jpg" margin="auto">
 	</div>
 	 <div style="padding-top: 7rem; padding-left: 8rem; text-align: left;"><a href="home.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Home.</a>
     </div>
-	<script type="text/javascript">
-
-
-		window.helpme = "Run !! HE is hungry.. fulfill his wishes or die to his WRATH !!";
-
-
-
-		window.onload = function () {
-			var imgElem = document.querySelector('.quesImg');
-			setInterval(function() {
-				imgElem.style.visibility = 'hidden';
-			}, 300)
-			setInterval(function() {
-				imgElem.style.visibility = 'initial';
-			}, 500)
-		}
-	</script>
 </body>
 </html>
 <?php

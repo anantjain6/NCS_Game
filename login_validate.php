@@ -29,7 +29,7 @@ if(isset($_GET['code']))
 		'".$gpUserProfile['given_name']." ".$gpUserProfile['family_name']."'
 		,'".$gpUserProfile['email']."'
 		,'".$gpUserProfile['picture']."'
-		,'1'
+		,'0'
 		,'".date('Y-m-d H:i:s')."'
 		,'".date('Y-m-d H:i:s')."'
 		)";
@@ -37,7 +37,7 @@ if(isset($_GET['code']))
 		
 		$_SESSION['user']=$gpUserProfile['email'];
 		echo"<script type='text/javascript'>
-		window.location.href='rule.php';
+		window.location.href='home.php';
 		</script>";
 	}
 }

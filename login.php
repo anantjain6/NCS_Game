@@ -14,7 +14,6 @@ if(isset($_SESSION['user']))
 	</script>";
 	die();
 }
-
 $authUrl = $gClient->createAuthUrl();
 ?>
 <a href="<?php echo filter_var($authUrl, FILTER_SANITIZE_URL); ?>">

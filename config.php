@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
+
 $con=mysqli_connect("localhost","root","","ncs_game");
 if(mysqli_connect_errno())
 {
@@ -11,15 +13,18 @@ $lockStart=800;
 $lockEnd=2000;
 if($lockStart < $current_time && $current_time < $lockEnd)
 {
-	include 'lock.php';
-	die();
+	// include 'lock.php';
+	// die();
 }
 
 require_once 'Mobile_Detect.php';
 $detect = new Mobile_Detect;
 if($detect->isMobile())
 {
-	include 'moblock.php';
+    echo "<script>
+    alert('He mocks at the puny devices humans operate.
+It makes them an easier target.');
+    </script>";
 	die();
 }
 
@@ -36,3 +41,8 @@ function mysqli_result($res,$row=0,$col=0)
     return false;
 }
 ?>
+
+
+<audio volume="0.05" loop autoplay>
+  <source src="assets/audio/shinigami.mp3">
+</audio>
