@@ -49,9 +49,9 @@ if(isset($_SESSION['user']))
 	</script>
 	
 	<!--from here-->
-	<button class="btn" id="btn1" style="position: fixed;left: 400; top: 300;" onclick="click1();">Click ME</button>
-	<a href="level0.php?start=true" style="color: #000; position: fixed; left: 600; top: 300;size:">You found ME!</a>
-	<button class="btn hidden" id="btn2" style="position: fixed;right: 400; top: 300;" onclick="click2();">Click ME
+	<button class="btn" id="btn1" style="position: fixed;left: 24%; top: 300;" onclick="click1();">Click ME</button>
+	<a href="level0.php?start=true" style="color: #000; position: fixed; left: 40%; top: 300;size:">They were mere distractions!<br>Click ME!</a>
+	<button class="btn hidden" id="btn2" style="position: fixed;right: 24%; top: 300;" onclick="click2();">Click ME
 	</button>
 	<!-- till here-->
     <div style="padding-top: 6rem; padding-left: 8rem; text-align: left;"><a href="home.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline; position: fixed; bottom: 30;">Home.</a>

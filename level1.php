@@ -51,7 +51,7 @@ if(isset($_SESSION['user']))
 			imgElem.src = 'assets/images/img-1-dark.jpg'
 			setTimeout(function() {
 				window.location = 'level1_validate.php';
-			}, 1500);
+			}, 1000);
 		}
 	</script
 </body>
