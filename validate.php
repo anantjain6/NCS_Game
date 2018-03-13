@@ -1,6 +1,9 @@
 <?php
-// if($user_level>$thislevel)
-// {
-// 	die("Oops its level ".$thislevel." but you are at level ".$user_level);
-// }
+if($user_level!=$thislevel)
+{
+	echo "<script>
+		window.location = 'level$user_level.php?';
+		</script>";
+		die();
+}
 ?>
