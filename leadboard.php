@@ -29,7 +29,8 @@ include 'config.php';
 </table>
 </div>
 <div style="padding-top: 6rem; padding-left: 8rem; text-align: left;"><a href="home.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline; position: fixed; bottom: 30;">Home.</a>
-    </div>
+</div>
+
 </body>
 </html>
 </div>

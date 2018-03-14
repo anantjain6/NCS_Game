@@ -43,6 +43,8 @@ if(isset($_SESSION['user']))
     </map>
     <div style="padding-top: 6rem; padding-left: 8rem; text-align: left;"><a href="home.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline; position: fixed; bottom: 30;">Home.</a>
     </div>
+    <div style="padding-top: 6rem; "><a href="home.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline; position: fixed; bottom: 30; right: 132;">Leaderboard.</a>
+ 	</div>
 	<script type="text/javascript">
 		window.helpme = "It's too bright here! Ryuk hates Light";
 		var imgElem = document.getElementById('level1img');
