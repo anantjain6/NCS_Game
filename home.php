@@ -25,9 +25,9 @@ if(isset($_SESSION['user']))
         echo "Resume game.";
     ?></a>
     </div>
-    <div style="padding-top: 1rem"><a href="" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Rules.</a>
+    <div style="padding-top: 1rem"><a href="rule.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Rules.</a>
     </div>
-    <div style="padding-top: 1rem"><a href="htp.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">How to play.</a>
+    <div style="padding-top: 1rem"><a href="https://youtu.be/OhP9Sp0JGL8" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">How to play.</a>
     </div>
     <div style="padding-top: 1rem"><a href="leadboard.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Leaderboard.</a>
     </div>
