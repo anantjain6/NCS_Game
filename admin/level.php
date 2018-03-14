@@ -12,6 +12,7 @@ include '../config.php';
 	<div class="table-container">
 	<h4>Leaderboard.</h4>
 <table>
+	<tr><td>LEVEL</td><td>Players</td>
 <?php
 $query="SELECT level,count(level) as total FROM `user` group by level order by level";
 $results = mysqli_query($con,$query);

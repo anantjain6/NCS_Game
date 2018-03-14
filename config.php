@@ -39,7 +39,6 @@ function mysqli_result($res,$row=0,$col=0)
 }
 ?>
 
-
 <audio volume="0.05" loop autoplay>
   <source src="assets/audio/shinigami.mp3">
 </audio>
