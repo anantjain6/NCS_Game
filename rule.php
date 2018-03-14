@@ -18,12 +18,8 @@ if(isset($_SESSION['user']))
 <body class="bkgbody">
     <div><img src="assets/images/logo-full.png" margin="auto"></div>
     <h1>BE WARNED</h1>
-    <div style="padding-top: 8rem"><a href="level<?php echo $user_level; ?>.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;"><?php
-    if($user_level==1)
-        echo "Start game.";
-    else
-        echo "Resume game.";
-    ?></a>
+    <div style="padding-top: 8rem"><h1 style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">
+   </a>
     </div>
     <div style="padding-top: 1rem"><a href="" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Rules.</a>
     </div>
