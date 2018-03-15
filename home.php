@@ -29,6 +29,8 @@ if(isset($_SESSION['user']))
     </div>
     <div style="padding-top: 1rem"><a href="https://youtu.be/OhP9Sp0JGL8" target="_blank" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">How to play.</a>
     </div>
+    <div style="padding-top: 1rem"><a href="https://fb.com/nightknitting/" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Discretion Forum</a>
+    </div>
     <div style="padding-top: 1rem"><a href="leadboard.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Leaderboard.</a>
     </div>
     <div style="padding-top: 1rem"><a href="signout.php" style="font-size: 1.5rem; font-weight: bold; text-decoration: underline;">Sign out.</a>
