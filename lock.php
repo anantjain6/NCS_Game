@@ -19,8 +19,8 @@
   var h = 19-d.getHours();
   var m = 60-d.getMinutes();
   var s = 60-d.getSeconds();
-  if(h==0&&m==0&&s==0)
-    window.location = '/'
+  if((h==0&&m==0&&s==0) || h<0)
+    window.location.href = '/';
   else
   document.getElementById("demo").innerHTML = h + ":"
   + m + ":" + s;
