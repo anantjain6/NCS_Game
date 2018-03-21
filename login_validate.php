@@ -14,6 +14,9 @@ if(isset($_GET['code']))
 	$count = mysqli_num_rows($result);
 	if ($count == 1)
 	{
+		$sql="UPDATE user SET pic='".$gpUserProfile['picture']."' WHERE email='".$gpUserProfile['email']."'";
+		$result = mysqli_query($con,$sql);
+		
 		$sql="SELECT level FROM user WHERE email='".$gpUserProfile['email']."'";
 		$result=mysqli_query($con,$sql);
 		$user_level=mysqli_result($result,0);
@@ -40,6 +43,12 @@ if(isset($_GET['code']))
 		window.location.href='home.php';
 		</script>";
 	}
+}
+else
+{
+	echo"<script type='text/javascript'>
+	window.location.href='index.php';
+	</script>";
 }
 
 ?>
